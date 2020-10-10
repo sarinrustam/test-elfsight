@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './styles/index.css';
+import App from './components/app/app.jsx';
 import { createAPI } from './api/api';
 import { createStore, applyMiddleware } from 'redux';
 import { Operation as DataOperation, reducer } from './reducer/data';

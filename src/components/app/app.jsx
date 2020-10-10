@@ -1,15 +1,25 @@
 import React from 'react';
-import './App.css';
+import '../../styles/App.css';
 import Albums from '../albums/albums.jsx';
+import { connect } from "react-redux";
+import { isLoaded } from '../../reducer/selectors';
 
-function App() {
+const App = (props) => {
+  const renderAlbums = () => props.isLoaded ? <Albums/> : '';
+  
   return (
     <div className="App">
       <header className="App-header">
-        <Albums/>
+        {renderAlbums()}
       </header>
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    isLoaded: isLoaded(state),
+  };
+}
+
+export default connect(mapStateToProps, null)(App);
