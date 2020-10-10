@@ -3,11 +3,12 @@ env:
   browser: true
   commonjs: true
 
-extends: ['htmlacademy/es6', 'airbnb', 'plugin:react/recommended']
+extends: ['airbnb', 'plugin:react/recommended']
 
 parserOptions:
   ecmaFeatures:
     jsx: true
+    experimentalObjectRestSpread: true
   ecmaVersion: 6
   sourceType: module
 
