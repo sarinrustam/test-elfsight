@@ -1,27 +1,25 @@
 import React from 'react';
-import Logo from './logo.svg';
 import './App.css';
+import Albums from './components/albums/albums.jsx';
+import { connect } from "react-redux";
+import { isLoaded } from './reducer/selectors';
 
-function App() {
+const App = (props) => {
+  const renderAlbums = () => props.isLoaded ? <Albums/> : '';
+  
   return (
     <div className="App">
       <header className="App-header">
-
-        <img src={Logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {renderAlbums()}
       </header>
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    isLoaded: isLoaded(state),
+  };
+}
+
+export default connect(mapStateToProps, null)(App);

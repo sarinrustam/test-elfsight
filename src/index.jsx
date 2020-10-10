@@ -17,10 +17,10 @@ const store = createStore(
     applyMiddleware(thunk.withExtraArgument(api))
   )
 );
-
+store.dispatch(DataOperation.loadUsers());
 store.dispatch(DataOperation.loadAlbums());
 store.dispatch(DataOperation.loadPhotos());
-store.dispatch(DataOperation.loadUsers());
+
 
 ReactDOM.render(
   <Provider store={store}>
