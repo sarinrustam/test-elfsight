@@ -25,13 +25,21 @@ const CountPhotos = styled(Title)`
 `;
 
 const Album = (props) => {
-  const {title, photosCount, imageSrc} = props.album;
+  const { title, photosCount, imageSrc } = props.album;
   return (
     <AlbumItem src={imageSrc}>
       <Title>{title}</Title>
       <CountPhotos>{photosCount}</CountPhotos>
     </AlbumItem>
   );
-}; 
+};
+
+Album.propTypes = {
+  album: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    photosCount: PropTypes.number.isRequired,
+    imageSrc: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 export default Album;

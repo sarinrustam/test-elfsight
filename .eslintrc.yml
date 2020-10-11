@@ -5,6 +5,15 @@ env:
 
 extends: ['airbnb', 'plugin:react/recommended']
 
+rules: 
+  react/destructuring-assignment: off
+  react/prefer-stateless-function: off
+  no-useless-constructor: off
+  react/jsx-fragments: off
+  import/named: off
+  import/extensions: off
+  comma-dangle: off
+
 parserOptions:
   ecmaFeatures:
     jsx: true

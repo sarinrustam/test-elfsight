@@ -12,7 +12,7 @@ export const isLoaded = createSelector(
   getUsers,
   getAlbums,
   getPhotos,
-  (resultOne, resultTwo, resultThree) => resultOne && resultTwo && resultThree
+  (resultOne, resultTwo, resultThree) => !!(resultOne && resultTwo && resultThree)
 );
 
 export const getPhotosByAlbum = (state, albumId) => state.photos

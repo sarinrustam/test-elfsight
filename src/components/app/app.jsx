@@ -1,16 +1,16 @@
-import React from "react";
-import { Router, Route, Switch } from "react-router-dom";
-import "../../styles/App.css";
-import Albums from "../albums/albums.jsx";
-import Photos from "../photos/photos.jsx";
-import { connect } from "react-redux";
-import { isLoaded } from "../../reducer/selectors";
-import history from "../../history";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Router, Route, Switch } from 'react-router-dom';
+import '../../styles/App.css';
+import { connect } from 'react-redux';
+import Albums from '../albums/albums.jsx';
+import Photos from '../photos/photos.jsx';
+import { isLoaded } from '../../reducer/selectors';
+import history from '../../history';
 
 const App = (props) => {
-  const renderAlbums = () => (props.isLoaded ? <Albums /> : "");
-  const renderPhotos = (albumId) =>
-    props.isLoaded ? <Photos albumId={albumId} /> : "";
+  const renderAlbums = () => (props.isLoaded ? <Albums /> : '');
+  const renderPhotos = (albumId) => (props.isLoaded ? <Photos albumId={albumId} /> : '');
 
   return (
     <Router history={history}>
@@ -36,10 +36,12 @@ const App = (props) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    isLoaded: isLoaded(state),
-  };
+App.propTypes = {
+  isLoaded: PropTypes.bool.isRequired,
 };
+
+const mapStateToProps = (state) => ({
+  isLoaded: isLoaded(state),
+});
 
 export default connect(mapStateToProps, null)(App);
