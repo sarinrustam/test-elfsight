@@ -39,7 +39,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "cross-env PUBLIC_URL=/docs webpack --mode production ",
+    "build": "cross-env PUBLIC_URL=/test-elfsight webpack --mode production ",
     "dev": "cross-env PUBLIC_URL=/ webpack-dev-server",
     "test": "./node_modules/.bin/eslint src/**/*.jsx"
   },
