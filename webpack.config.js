@@ -1,6 +1,7 @@
 const path = require(`path`);
 const portFinderSync = require(`portfinder-sync`);
 const port = portFinderSync.getPort(1338);
+const webpack = require(`webpack`);
 
 module.exports = {
   entry: `./src/index.jsx`,
@@ -43,4 +44,9 @@ module.exports = {
     ],
   },
   devtool: `source-map`,
+  plugins: [
+    new webpack.DefinePlugin({
+      [`process.env.PUBLIC_URL`]: JSON.stringify(process.env.PUBLIC_URL)
+    })
+  ]
 };

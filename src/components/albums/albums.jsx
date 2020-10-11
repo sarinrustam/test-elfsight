@@ -12,12 +12,19 @@ const AlbumsList = styled.ul`
   flex-wrap: wrap;
 `;
 
-
 const AlbumItemWrapper = styled.li`
   margin-right: 20px;
   margin-bottom: 20px;
   list-style: none;
 `;
+
+const AlbumsTitle = styled.p`
+  margin: 15px 0 15px 0;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 600;
+`;
+
 
 class Albums extends React.Component {
   constructor(props) {
@@ -27,6 +34,8 @@ class Albums extends React.Component {
   render() {
     const { albums } = this.props;
     return (
+      <>
+      <AlbumsTitle>Альбомы</AlbumsTitle>
       <AlbumsList>
         {albums.map((album) => {
           console.log(album)
@@ -37,6 +46,7 @@ class Albums extends React.Component {
           )
         })}
       </AlbumsList>
+      </>
     );
   }
 };
