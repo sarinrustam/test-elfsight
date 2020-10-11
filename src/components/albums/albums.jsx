@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from "react-redux";
 import { getAlbumsByUser } from '../../reducer/selectors';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import Album from '../album/album.jsx';
 
@@ -41,7 +42,7 @@ class Albums extends React.Component {
           console.log(album)
           return (
             <AlbumItemWrapper key={album.id}>
-              <Album album={album}/>
+              <Link to={`/album/${album.id}`}><Album album={album}/></Link>
             </AlbumItemWrapper>
           )
         })}
