@@ -26,5 +26,5 @@
 3) Сервер автоматически ищет свободный порт и запускает сборку на нем
 
 ## Контакты
-e-mail: lorienas@gmail.com
-Telegram/WhatsApp: +7 919 773 43 11
+1)e-mail: lorienas@gmail.com
+1)Telegram/WhatsApp: +7 919 773 43 11
