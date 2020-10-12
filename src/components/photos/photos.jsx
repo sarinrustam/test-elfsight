@@ -5,6 +5,9 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getPhotosByAlbum } from '../../reducer/selectors';
 import Popup from '../popup/popup.jsx';
+import prevSkip from './prevSkip.svg'
+import backArrow from './backArrow.svg';
+import nextSkip from './nextSkip.svg';
 
 const PhotosList = styled.section`
   display: flex;
@@ -151,7 +154,7 @@ class Photos extends React.Component {
       <>
         <Link style={{ lineHeight: '0' }} to="/">
           <PhotosBackButton>
-            <ButtonIcon src="/backArrow.svg" alt="Кнопка назад" />
+            <ButtonIcon src={backArrow} alt="Кнопка назад" />
           </PhotosBackButton>
         </Link>
         <PhotosTitle>Фотографии</PhotosTitle>
@@ -174,7 +177,7 @@ class Photos extends React.Component {
                 disabled={photosByAlbum.indexOf(this.state.chosenPhoto) === 0}
                 onClick={this.handlePrevPhoto}
               >
-                <ButtonIcon src="./prevSkip.svg" alt="Кнопка назад"  />
+                <ButtonIcon src={prevSkip} alt="Кнопка назад"  />
               </PrevButton>
               <NextButton
                 disabled={
@@ -183,7 +186,7 @@ class Photos extends React.Component {
                 }
                 onClick={this.handleNextPhoto}
               >
-                <ButtonIcon src="/nextSkip.svg" alt="Кнопка вперед"  />
+                <ButtonIcon src={nextSkip} alt="Кнопка вперед"  />
               </NextButton>
             </PhotosGalleryWrapper>
           </Popup>
