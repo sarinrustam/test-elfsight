@@ -3,12 +3,14 @@ const portFinderSync = require(`portfinder-sync`);
 const port = portFinderSync.getPort(1338);
 const webpack = require(`webpack`);
 
+console.log(process.env.PUBLIC_URL, 'process.env.PUBLIC_URL')
+
 module.exports = {
   entry: `./src/index.jsx`,
   output: {
     filename: `bundle.js`,
     path: path.resolve(__dirname, `docs`),
-    publicPath: process.env.PUBLIC_URL
+    publicPath: process.env.PUBLIC_URL === '/test-elfsight' ? '/test-elfsight' : '/'
   },
   devServer: {
     contentBase: path.resolve(__dirname, `docs`),
