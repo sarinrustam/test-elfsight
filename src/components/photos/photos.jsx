@@ -151,7 +151,7 @@ class Photos extends React.Component {
       <>
         <Link style={{ lineHeight: '0' }} to="/">
           <PhotosBackButton>
-            <ButtonIcon src="/backArrow.svg" alt="Изображение стрелки" />
+            <ButtonIcon src="/backArrow.svg" alt="Кнопка назад" />
           </PhotosBackButton>
         </Link>
         <PhotosTitle>Фотографии</PhotosTitle>
@@ -174,7 +174,7 @@ class Photos extends React.Component {
                 disabled={photosByAlbum.indexOf(this.state.chosenPhoto) === 0}
                 onClick={this.handlePrevPhoto}
               >
-                <ButtonIcon src="/prevSkip.svg" />
+                <ButtonIcon src="/prevSkip.svg" alt="Кнопка назад"  />
               </PrevButton>
               <NextButton
                 disabled={
@@ -183,7 +183,7 @@ class Photos extends React.Component {
                 }
                 onClick={this.handleNextPhoto}
               >
-                <ButtonIcon src="/nextSkip.svg" />
+                <ButtonIcon src="/nextSkip.svg" alt="Кнопка вперед"  />
               </NextButton>
             </PhotosGalleryWrapper>
           </Popup>
@@ -196,7 +196,7 @@ class Photos extends React.Component {
 }
 
 Photos.propTypes = {
-  photosByAlbum: PropTypes.shape([]).isRequired,
+  photosByAlbum: PropTypes.array.isRequired,
 };
 
 const mapStateToProps = (state, props) => ({

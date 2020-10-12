@@ -7,7 +7,8 @@ module.exports = {
   entry: `./src/index.jsx`,
   output: {
     filename: `bundle.js`,
-    path: path.join(__dirname, `docs`)
+    path: path.join(__dirname, `docs`),
+    publicPath: JSON.stringify(process.env.PUBLIC_URL)
   },
   devServer: {
     contentBase: path.join(__dirname, `docs`),

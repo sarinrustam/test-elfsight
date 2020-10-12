@@ -41,6 +41,7 @@ class Albums extends React.Component {
 
   render() {
     const { albums } = this.props;
+    console.log(albums);
     return (
       <>
         <AlbumsTitle>Альбомы</AlbumsTitle>
@@ -57,7 +58,7 @@ class Albums extends React.Component {
 }
 
 Albums.propTypes = {
-  albums: PropTypes.shape([]).isRequired,
+  albums: PropTypes.array.isRequired,
 };
 
 const mapStateToProps = (state) => ({
