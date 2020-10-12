@@ -57,7 +57,7 @@ const Popup = (props) => (
   <PopupOverlay>
     <PopupContainer>
       <PopupClose onClick={props.handlePopupClose}>
-        <PopupCloseIcon src="/closeIcon.svg" />
+        <PopupCloseIcon src="./closeIcon.svg" />
       </PopupClose>
       <PopupContent>{props.children}</PopupContent>
     </PopupContainer>
