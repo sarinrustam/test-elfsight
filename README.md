@@ -12,7 +12,9 @@
 Для построения UI мы просим не использовать готовые компоненты и библиотеки, так как мы хотим увидеть твои навыки разработки и верстки.
 
 ## Описание
-Был реализован план - <img width="769" alt="Forked" src="https://cloud.githubusercontent.com/assets/259739/20264122/f63219a6-aa7a-11e6-945a-89818fc7c014.png">
+Был реализован план:
+<img width="769" alt="Plan" src="https://user-images.githubusercontent.com/25099217/95769970-5e955b00-0cc1-11eb-8269-96e68de7abfb.jpeg">
+
 1) Проект написан на React + Redux;
 2) Использована библиотека Axios для запросов к серверу;
 3) Styled-components для стилей;
