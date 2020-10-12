@@ -8,7 +8,7 @@ module.exports = {
   output: {
     filename: `bundle.js`,
     path: path.resolve(__dirname, `docs`),
-    publicPath: JSON.stringify(process.env.PUBLIC_URL)
+    publicPath: process.env.PUBLIC_URL
   },
   devServer: {
     contentBase: path.resolve(__dirname, `docs`),
