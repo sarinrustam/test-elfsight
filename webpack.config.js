@@ -10,7 +10,7 @@ module.exports = {
   output: {
     filename: `bundle.js`,
     path: path.resolve(__dirname, `docs`),
-    publicPath: process.env.PUBLIC_URL === '/test-elfsight' ? '/test-elfsight' : '/'
+    publicPath: process.env.PUBLIC_URL === '/test-elfsight' ? '/test-elfsight/' : '/'
   },
   devServer: {
     contentBase: path.resolve(__dirname, `docs`),
