@@ -41,7 +41,6 @@ class Albums extends React.Component {
 
   render() {
     const { albums } = this.props;
-    console.log(albums);
     return (
       <>
         <AlbumsTitle>Альбомы</AlbumsTitle>

@@ -174,7 +174,7 @@ class Photos extends React.Component {
                 disabled={photosByAlbum.indexOf(this.state.chosenPhoto) === 0}
                 onClick={this.handlePrevPhoto}
               >
-                <ButtonIcon src="/prevSkip.svg" alt="Кнопка назад"  />
+                <ButtonIcon src="./prevSkip.svg" alt="Кнопка назад"  />
               </PrevButton>
               <NextButton
                 disabled={

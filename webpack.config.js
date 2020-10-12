@@ -7,11 +7,11 @@ module.exports = {
   entry: `./src/index.jsx`,
   output: {
     filename: `bundle.js`,
-    path: path.join(__dirname, `docs`),
+    path: path.resolve(__dirname, `docs`),
     publicPath: JSON.stringify(process.env.PUBLIC_URL)
   },
   devServer: {
-    contentBase: path.join(__dirname, `docs`),
+    contentBase: path.resolve(__dirname, `docs`),
     historyApiFallback: true,
     watchContentBase: true,
     open: true,

@@ -1,6 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import closeIcon from './closeIcon.svg';
 
 const PopupOverlay = styled.section`
   display: flex;
@@ -57,7 +58,7 @@ const Popup = (props) => (
   <PopupOverlay>
     <PopupContainer>
       <PopupClose onClick={props.handlePopupClose}>
-        <PopupCloseIcon src="./closeIcon.svg" alt="Закрыть окно"  />
+        <PopupCloseIcon src={closeIcon} alt="Закрыть окно" />
       </PopupClose>
       <PopupContent>{props.children}</PopupContent>
     </PopupContainer>
