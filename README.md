@@ -13,6 +13,7 @@
 
 ## Описание
 Был реализован план:
+
 <img width="769" alt="Plan" src="https://user-images.githubusercontent.com/25099217/95769970-5e955b00-0cc1-11eb-8269-96e68de7abfb.jpeg">
 
 1) Проект написан на React + Redux;
@@ -28,5 +29,5 @@
 3) Сервер автоматически ищет свободный порт и запускает сборку на нем
 
 ## Контакты
-1)e-mail: lorienas@gmail.com
-1)Telegram/WhatsApp: +7 919 773 43 11
+* e-mail: lorienas@gmail.com
+* Telegram/WhatsApp: +7 919 773 43 11
